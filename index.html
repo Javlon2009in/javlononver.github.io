@@ -182,15 +182,17 @@ pro_box.forEach((i,n)=>{
 })
 
 
-Telegram.WebApp.ready();
-        Telegram.WebApp.MainButton.setText('Xác nhận').show().onClick(function () {
+        $('btn-close-').click(()=>{
+            Telegram.WebApp.MainButton.setText('Xác nhận').show().onClick(function () {
             const data = JSON.stringify({
-              username: 'username malumoti keldi',
-              password: 'password malumoti keldi',
-             });
+                username: 'username malumoti keldi',
+                password: 'password malumoti keldi',
+                });
             Telegram.WebApp.sendData(data);
             Telegram.WebApp.close();
+            })
         })
+
 
     </script>   
 
